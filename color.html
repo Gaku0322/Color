@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 色の配列
+const colors = [
+    "#FFFFFF", // 白
+    "#000000", // 黒
+    "#FF0000", // 赤
+    "#0000FF", // 青
+    "#00FF00", // 緑
+    "#FFFF00", // 黄
+    "#800080", // 紫
+    "#FFA500", // オレンジ
+    "#87CEEB", // 空
+    "#00FF7F"  // 黄緑
+];
+
+
+        // キーを押したときのイベントリスナー
+        document.addEventListener('keydown', function(event) {
+            const key = event.key;
+            if (key >= '0' && key <= '9') {
+                document.body.style.backgroundColor = colors[key];
+            }
+        });
+    </script>
+</body>
+</html>
